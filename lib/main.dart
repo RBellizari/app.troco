@@ -10,6 +10,10 @@ import 'screens/zipcodefull.page.dart';
 import 'screens/fill.page.dart';
 import 'screens/selfie.page.dart';
 import 'screens/first.access.page.dart';
+import 'screens/id.company.page.dart';
+import 'screens/name.company.page.dart';
+import 'screens/email.company.page.dart';
+import 'screens/token.company.page.dart';
 import 'screens/cam.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'screens/svg.dart';
@@ -38,6 +42,12 @@ class MyApp extends StatelessWidget {
         '/SelfiePage': (BuildContext context) => SelfiePage(),
         '/MyHomePage': (BuildContext context) => MyHomePage(),
         '/FirstAccessPage': (BuildContext context) => FirstAccessPage(),
+        '/IdCompayPage': (BuildContext context) => IdCompayPage(),
+        '/NameCompanyPage': (BuildContext context) => NameCompanyPage(),
+        '/TokenCompanyPage': (BuildContext context) => TokenCompanyPage(),
+        '/EmailCompanyPage': (BuildContext context) => EmailCompanyPage(),
+
+       
       },
     );
   }

@@ -3,14 +3,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'svg.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 
-class IdCompayPage extends StatefulWidget {
+class ZipCodeCompanyPage extends StatefulWidget {
   @override
-  _IdCompayPage createState() => _IdCompayPage();
+  _ZipCodeCompanyPage createState() => _ZipCodeCompanyPage();
 }
 
-var controlleridcompany = MaskedTextController(mask: '00.000.000/0000-00');
+var controllerzip = MaskedTextController(mask: '00000-000');
 
-class _IdCompayPage extends State<IdCompayPage> {
+class _ZipCodeCompanyPage extends State<ZipCodeCompanyPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,31 +22,31 @@ class _IdCompayPage extends State<IdCompayPage> {
         child: ListView(
           children: <Widget>[
             Text(
-              'Passo 1/6',
+              'Passo 6/6',
               style: TextStyle(color: const Color(0xFFE573C8), fontSize: 12),
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 40.0),
             Container(
-              child: SvgPicture.asset(iconPhone),
+              child: SvgPicture.asset(iconZipOffice),
             ),
             SizedBox(height: 40.0),
             Text(
-              'Vamos iniciar o cadastro da sua empresa, é super rápido!',
+              'Precisamos saber\no endereço da empresa',
               style: TextStyle(color: const Color(0xFFE573C8), fontSize: 20),
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 30.0),
             Text(
-              'Precisamos do CNPJ da empresa',
+              'Por favor nos informe o CEP da empresa',
               style: TextStyle(color: const Color(0xFF404A69), fontSize: 15),
               textAlign: TextAlign.center,
             ),
-             SizedBox(height: 45.0),
+            SizedBox(height: 45.0),
             Container(
               padding: EdgeInsets.only(
                   top: 30.0, right: 20.0, bottom: 0.0, left: 20.0),
-              height: 210.0,
+              height: 220.0,
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: const Color(0xFFFFFFFF),
@@ -56,21 +56,20 @@ class _IdCompayPage extends State<IdCompayPage> {
               ),
               child: ListView(
                 children: <Widget>[
-                 TextFormField(
-                   controller: controlleridcompany,
+                  TextFormField(
+                    controller: controllerzip,
                     autofocus: false,
                     textAlign: TextAlign.center,
                     keyboardType: TextInputType.phone,
                     style: new TextStyle(
                         color: const Color(0xFF440538), fontSize: 20),
                     decoration: InputDecoration(
-                      hintText: 'Ex.: 00.000.000/0000-00',
+                      hintText: 'Ex.: 06310-080',
                       labelStyle: TextStyle(
                         color: const Color(0xFF440538),
                       ),
                     ),
                   ),
-                 
                   SizedBox(height: 50.0),
                   Container(
                     height: 45.0,
@@ -94,13 +93,11 @@ class _IdCompayPage extends State<IdCompayPage> {
                           ],
                         ),
                         onPressed: () =>
-                            Navigator.pushNamed(context, '/NameCompanyPage'),
+                            Navigator.pushNamed(context, '/ZipCodeFullCompanyPage'),
                       ),
                     ),
                   ),
                   SizedBox(height: 30.0),
-                 
-                  
                 ],
               ),
             ),

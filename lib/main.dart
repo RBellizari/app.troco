@@ -14,6 +14,11 @@ import 'screens/id.company.page.dart';
 import 'screens/name.company.page.dart';
 import 'screens/email.company.page.dart';
 import 'screens/token.company.page.dart';
+import 'screens/pass.company.page.dart';
+import 'screens/zipcode.company.page.dart';
+import 'screens/zipcodefull.company.page.dart';
+import 'screens/fill.company.page.dart';
+import 'screens/img.company.page.dart';
 import 'screens/cam.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'screens/svg.dart';
@@ -46,6 +51,13 @@ class MyApp extends StatelessWidget {
         '/NameCompanyPage': (BuildContext context) => NameCompanyPage(),
         '/TokenCompanyPage': (BuildContext context) => TokenCompanyPage(),
         '/EmailCompanyPage': (BuildContext context) => EmailCompanyPage(),
+        '/PassCompanyPage': (BuildContext context) => PassCompanyPage(),
+        '/ZipCodeCompanyPage': (BuildContext context) => ZipCodeCompanyPage(),
+        '/ZipCodeFullCompanyPage': (BuildContext context) => ZipCodeFullCompanyPage(),
+        '/FillCompanyPage': (BuildContext context) => FillCompanyPage(),
+        '/ImgCompanyPage': (BuildContext context) => ImgCompanyPage(),
+
+        
 
        
       },

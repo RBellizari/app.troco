@@ -19,7 +19,7 @@ class _TokenCompanyPage extends State<TokenCompanyPage> {
         child: ListView(
           children: <Widget>[
             Text(
-              'Passo 4/5',
+              'Passo 4/6',
               style: TextStyle(color: const Color(0xFFE573C8), fontSize: 12),
               textAlign: TextAlign.center,
             ),
@@ -155,7 +155,7 @@ class _TokenCompanyPage extends State<TokenCompanyPage> {
                           ],
                         ),
                         onPressed: () =>
-                            Navigator.pushNamed(context, '/PassPage'),
+                            Navigator.pushNamed(context, '/PassCompanyPage'),
                       ),
                     ),
                   ),

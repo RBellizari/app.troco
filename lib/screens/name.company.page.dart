@@ -19,7 +19,7 @@ class _NameCompanyPage extends State<NameCompanyPage> {
         child: ListView(
           children: <Widget>[
             Text(
-              'Passo 2/5',
+              'Passo 2/6',
               style: TextStyle(color: const Color(0xFFE573C8), fontSize: 12),
               textAlign: TextAlign.center,
             ),

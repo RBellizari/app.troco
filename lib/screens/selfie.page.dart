@@ -116,7 +116,7 @@ class _SelfiePage extends State<SelfiePage> {
                               ],
                             ),
                             onPressed: () =>
-                                Navigator.pushNamed(context, '/AccessPage'),
+                                Navigator.pushNamed(context, '/DashboardPage'),
                           ),
                         ),
                       )
@@ -142,7 +142,7 @@ class _SelfiePage extends State<SelfiePage> {
                               ],
                             ),
                             onPressed: () =>
-                                Navigator.pushNamed(context, '/AccessPage'),
+                                Navigator.pushNamed(context, '/DashboardPage'),
                           ),
                         ),
                       )),

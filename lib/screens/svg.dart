@@ -10,3 +10,4 @@ const iconFill = 'assets/icon-cad-fill.svg';
 const iconSelfie = 'assets/icon-cad-selfie.svg';
 const imgFirstAccess = 'assets/img-access.svg';
 const iconPhoto = 'assets/icon-cad-photo.svg';
+const backDashLogoTop = 'assets/back-logo-dash.svg';

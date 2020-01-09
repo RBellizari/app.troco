@@ -76,6 +76,14 @@ flutter:
   - assets/icon-cad-zip-office.svg
   - assets/icon-cad-photo.svg
   - assets/back-logo-dash.svg
+  - assets/icon-extract.svg
+  - assets/icon-draw.svg
+  - assets/icon-add-cash.svg
+  - assets/icon-toll.svg
+  - assets/icon-donation.svg
+  - assets/icon-transport.svg
+  - assets/icon-reload.svg
+
 
   
 

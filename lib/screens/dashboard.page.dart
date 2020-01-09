@@ -53,10 +53,15 @@ class _DashboardPage extends State<DashboardPage> {
                           ),
                         ),
                         Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          //mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Align(
                               child: Container(
+                                padding: EdgeInsets.only(
+                                    top: 40.0,
+                                    right: 0.0,
+                                    bottom: 0.0,
+                                    left: 0.0),
                                 child: SvgPicture.asset(textTroco),
                               ),
                             ),
@@ -106,9 +111,9 @@ class _DashboardPage extends State<DashboardPage> {
                     children: <Widget>[
                       Align(
                         child: Container(
-                          height: 150.0,
-                           padding: EdgeInsets.only(
-                           top: 0.0, right: 0.0, bottom: 0.0, left: 0.0),
+                          height: 180.0,
+                          padding: EdgeInsets.only(
+                              top: 0.0, right: 0.0, bottom: 0.0, left: 0.0),
                           width: MediaQuery.of(context).size.width - 40,
                           decoration: BoxDecoration(
                               color: const Color(0xFFFFFFFF),
@@ -124,17 +129,22 @@ class _DashboardPage extends State<DashboardPage> {
                                   ),
                                 )
                               ]),
-                             child: Stack(
-                               children: <Widget>[
-                                 Container(
-                          height: 60.0,
-                          padding: EdgeInsets.only(
-                           top: 4.0, right: 20.0, bottom: 0.0, left: 20.0),
-                          width: MediaQuery.of(context).size.width - 40,
-                          decoration: BoxDecoration(
-                              color: const Color(0xFFFFFFFF),
-                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
-                               border: Border(
+                          child: Stack(
+                            children: <Widget>[
+                              Container(
+                                height: 60.0,
+                                padding: EdgeInsets.only(
+                                    top: 4.0,
+                                    right: 20.0,
+                                    bottom: 0.0,
+                                    left: 20.0),
+                                width: MediaQuery.of(context).size.width - 40,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFFFFFFFF),
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(10),
+                                      topRight: Radius.circular(10)),
+                                  border: Border(
                                     top: BorderSide(
                                         width: 1.0, color: Color(0xFFE9E9E9)),
                                     left: BorderSide(
@@ -144,33 +154,183 @@ class _DashboardPage extends State<DashboardPage> {
                                     bottom: BorderSide(
                                         width: 1.0, color: Color(0xFFE9E9E9)),
                                   ),
-                              ),
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                  child: Text('Seus Trocados:',
-                                   style: TextStyle(color: const Color(0xFF686c6f), fontSize: 14),
-              textAlign: TextAlign.left,), 
                                 ),
-                                
-                                 Expanded(
-                                  child: Text('0,00',
-                                  style: TextStyle(color: const Color(0xFF313139), fontSize: 30),
-              textAlign: TextAlign.right,
-                                  ), 
-                                )
-                              ],
-                            ),
+                                child: Row(
+                                  children: <Widget>[
+                                    Expanded(
+                                      child: Text(
+                                        'Seu Saldo:',
+                                        style: TextStyle(
+                                            color: const Color(0xFF686c6f),
+                                            fontSize: 15),
+                                        textAlign: TextAlign.left,
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: Text(
+                                        '0,00',
+                                        style: TextStyle(
+                                            color: const Color(0xFF313139),
+                                            fontSize: 30),
+                                        textAlign: TextAlign.right,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(
+                                    top: 80.0,
+                                    right: 20.0,
+                                    bottom: 0.0,
+                                    left: 20.0),
+                                child: Row(
+                                  children: <Widget>[
+                                    Expanded(
+                                        child: FlatButton(
+                                      child: SvgPicture.asset(iconExtract),
+                                      onPressed: () => Navigator.pushNamed(
+                                          context, '/ZipCodeCompanyPage'),
+                                    )),
+                                    Expanded(
+                                        child: FlatButton(
+                                      child: SvgPicture.asset(iconAddCash),
+                                      onPressed: () => Navigator.pushNamed(
+                                          context, '/ZipCodeCompanyPage'),
+                                    )),
+                                    Expanded(
+                                        child: FlatButton(
+                                      child: SvgPicture.asset(iconDrawCash),
+                                      onPressed: () => Navigator.pushNamed(
+                                          context, '/ZipCodeCompanyPage'),
+                                    )),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
                         ),
-                               ],
-                             ),
+                      )
+                    ],
+                  )),
+              Positioned(
+                  left: 20,
+                  top: 450.0,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Align(
+                        child: Container(
+                          height: 180.0,
+                          padding: EdgeInsets.only(
+                              top: 0.0, right: 0.0, bottom: 0.0, left: 0.0),
+                          width: MediaQuery.of(context).size.width - 40,
+                          child: Stack(
+                            children: <Widget>[
+                              Container(
+                                height: 60.0,
+                                padding: EdgeInsets.only(
+                                    top: 0.0,
+                                    right: 0.0,
+                                    bottom: 0.0,
+                                    left: 20.0),
+                                width: MediaQuery.of(context).size.width - 40,
+                                child: Row(
+                                  children: <Widget>[
+                                    Expanded(
+                                      child: Text(
+                                        'Use seus trocados:',
+                                        style: TextStyle(
+                                            color: const Color(0xFF000000),
+                                            fontSize: 16, fontWeight: FontWeight.w500),
+                                        textAlign: TextAlign.left,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(
+                                    top: 60.0,
+                                    right: 0.0,
+                                    bottom: 0.0,
+                                    left: 0.0),
+                                child: Row(
+                                  children: <Widget>[
+                                    Expanded(
+                                        child: FlatButton(
+                                      child: SvgPicture.asset(iconReload),
+                                      onPressed: () => Navigator.pushNamed(
+                                          context, '/ZipCodeCompanyPage'),
+                                    )),
+                                    Expanded(
+                                        child: Text(
+                                      'Recarga',
+                                      style: TextStyle(
+                                          color: const Color(0xFF000000),
+                                          fontSize: 15),
+                                    )),
+                                    Expanded(
+                                        child: FlatButton(
+                                      child: SvgPicture.asset(iconToll),
+                                      onPressed: () => Navigator.pushNamed(
+                                          context, '/ZipCodeCompanyPage'),
+                                    )),
+                                    Expanded(
+                                        child: Text(
+                                      'Pedágio',
+                                      style: TextStyle(
+                                          color: const Color(0xFF000000),
+                                          fontSize: 15),
+                                    )),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(
+                                    top: 130.0,
+                                    right: 0.0,
+                                    bottom: 0.0,
+                                    left: 0.0),
+                                child: Row(
+                                  children: <Widget>[
+                                    Expanded(
+                                        child: FlatButton(
+                                      child: SvgPicture.asset(iconTransport),
+                                      onPressed: () => Navigator.pushNamed(
+                                          context, '/ZipCodeCompanyPage'),
+                                    )),
+                                    Expanded(
+                                        child: Text(
+                                      'Transporte',
+                                      style: TextStyle(
+                                          color: const Color(0xFF000000),
+                                          fontSize: 15),
+                                    )),
+                                    Expanded(
+                                        child: FlatButton(
+                                      child: SvgPicture.asset(iconDonation),
+                                      onPressed: () => Navigator.pushNamed(
+                                          context, '/ZipCodeCompanyPage'),
+                                    )),
+                                    Expanded(
+                                        child: Text(
+                                      'Doação',
+                                      style: TextStyle(
+                                          color: const Color(0xFF000000),
+                                          fontSize: 15),
+                                    )),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
                         ),
-                      
                       )
                     ],
                   )),
             ],
-          )
+          ),
         ],
       ),
     );

@@ -85,6 +85,7 @@ flutter:
   - assets/icon-reload.svg
 
 
+
   
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -101,10 +102,10 @@ flutter:
   fonts:
     - family: Oxygen
       fonts:
-         - asset: fonts/Oxygen-Regular.ttf
-         - asset: fonts/Oxygen-Bold.ttf
+         - asset: assets/fonts/Oxygen-Regular.ttf
+         - asset: assets/fonts/Oxygen-Bold.ttf
            weight: 700
-         - asset: fonts/Oxygen-Light.ttf
+         - asset: assets/fonts/Oxygen-Light.ttf
            weight: 300
   #
   # For details regarding fonts from package dependencies,

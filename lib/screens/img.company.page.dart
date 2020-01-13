@@ -116,7 +116,7 @@ class _ImgCompanyPage extends State<ImgCompanyPage> {
                               ],
                             ),
                             onPressed: () =>
-                                Navigator.pushNamed(context, '/AccessPage'),
+                                Navigator.pushNamed(context, '/DashboardCompanyPage'),
                           ),
                         ),
                       )
@@ -142,7 +142,7 @@ class _ImgCompanyPage extends State<ImgCompanyPage> {
                               ],
                             ),
                             onPressed: () =>
-                                Navigator.pushNamed(context, '/AccessPage'),
+                                Navigator.pushNamed(context, '/DashboardCompanyPage'),
                           ),
                         ),
                       )),

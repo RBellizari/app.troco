@@ -20,6 +20,7 @@ import 'screens/zipcodefull.company.page.dart';
 import 'screens/fill.company.page.dart';
 import 'screens/img.company.page.dart';
 import 'screens/dashboard.page.dart';
+import 'screens/dashboard.company.page.dart';
 import 'screens/cam.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'screens/svg.dart';
@@ -58,6 +59,7 @@ class MyApp extends StatelessWidget {
         '/FillCompanyPage': (BuildContext context) => FillCompanyPage(),
         '/ImgCompanyPage': (BuildContext context) => ImgCompanyPage(),
         '/DashboardPage': (BuildContext context) => DashboardPage(),
+        '/DashboardCompanyPage': (BuildContext context) => DashboardCompanyPage(),
 
         
 

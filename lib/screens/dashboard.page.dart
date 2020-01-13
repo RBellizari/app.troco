@@ -1,20 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'svg.dart';
-import 'package:flutter_masked_text/flutter_masked_text.dart';
 
 class DashboardPage extends StatefulWidget {
   @override
   _DashboardPage createState() => _DashboardPage();
 }
 
-var controllerphone = MaskedTextController(mask: '(00) 00000-0000');
-
 class _DashboardPage extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF2ECF1),
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            Container(
+              child: Text('teste'),
+            )
+          ],
+        ),
+      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   items: [
+      //     BottomNavigationBarItem(
+      //         icon: Icon(Icons.monetization_on),
+      //         title: Text('Home'),
+      //         activeIcon: Icon(
+      //           Icons.monetization_on,
+      //           color: Colors.red,
+      //         )),
+      //     BottomNavigationBarItem(
+      //         icon: Icon(Icons.location_on),
+      //         title: Text('Home'),
+      //         activeIcon: Icon(
+      //           Icons.location_on,
+      //           color: Colors.red,
+      //         ))
+      //   ],
+      // ),
       body: Stack(
         children: <Widget>[
           Stack(
@@ -22,21 +45,19 @@ class _DashboardPage extends State<DashboardPage> {
               Column(
                 children: <Widget>[
                   Container(
+                    padding: EdgeInsets.only(
+                        top: 0.0, right: 0.0, bottom: 0.0, left: 0.0),
                     width: MediaQuery.of(context).size.width,
-                    height: 310.0,
-                    //padding: EdgeInsets.all(20),
+                    height: 260.0,
                     decoration: BoxDecoration(
                         gradient: LinearGradient(
                           begin: Alignment.topCenter,
-                          end: Alignment
-                              .bottomCenter, // 10% of the width, so there are ten blinds.
+                          end: Alignment.bottomCenter,
                           colors: [
                             const Color(0xFF470036),
                             const Color(0xFF2B2E47)
                           ],
-                          // whitish to gray
                           tileMode: TileMode.repeated,
-                          // repeats the gradient over the canvas
                         ),
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.elliptical(60, 35),
@@ -57,44 +78,86 @@ class _DashboardPage extends State<DashboardPage> {
                           children: <Widget>[
                             Align(
                               child: Container(
-                                padding: EdgeInsets.only(
-                                    top: 40.0,
-                                    right: 0.0,
-                                    bottom: 0.0,
-                                    left: 0.0),
-                                child: SvgPicture.asset(textTroco),
-                              ),
+                                  padding: EdgeInsets.only(
+                                      top: 0.0,
+                                      right: 0.0,
+                                      bottom: 0.0,
+                                      left: 0.0),
+                                  child: AppBar(
+                                    title: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        SvgPicture.asset(
+                                          textTroco,
+                                          fit: BoxFit.cover,
+                                          height: 20.0,
+                                        ),
+                                      ],
+                                    ),
+                                    actions: <Widget>[
+                                      IconButton(
+                                        icon: Icon(Icons.notifications_none),
+                                        onPressed: () {
+                                          print('Click search');
+                                        },
+                                      ),
+                                    ],
+                                    backgroundColor: Colors.transparent,
+                                    elevation: 0.0,
+                                    iconTheme: IconThemeData(
+                                      color: Colors.white,
+                                    ),
+                                  )),
                             ),
-                            SizedBox(height: 40.0),
-                            Align(
-                              child: Container(
-                                width: 80,
-                                height: 80,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(80),
-                                  color: const Color(0xFFFFFFFF),
-                                  border: Border(
-                                    top: BorderSide(
-                                        width: 1.0, color: Color(0xFFE573C8)),
-                                    left: BorderSide(
-                                        width: 1.0, color: Color(0xFFE573C8)),
-                                    right: BorderSide(
-                                        width: 1.0, color: Color(0xFFE573C8)),
-                                    bottom: BorderSide(
-                                        width: 1.0, color: Color(0xFFE573C8)),
+                            SizedBox(height: 15.0),
+                            Row(
+                              children: <Widget>[
+                                SizedBox(width: 20.0),
+                                Container(
+                                  width: 80,
+                                  height: 80,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(80),
+                                    color: const Color(0xFFFFFFFF),
+                                    border: Border(
+                                      top: BorderSide(
+                                          width: 1.0, color: Color(0xFFE573C8)),
+                                      left: BorderSide(
+                                          width: 1.0, color: Color(0xFFE573C8)),
+                                      right: BorderSide(
+                                          width: 1.0, color: Color(0xFFE573C8)),
+                                      bottom: BorderSide(
+                                          width: 1.0, color: Color(0xFFE573C8)),
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ),
-                            SizedBox(height: 20.0),
-                            Align(
-                              child: Text(
-                                'Boa tarde, Robson!',
-                                style: TextStyle(
-                                    color: const Color(0xFFFFFFFF),
-                                    fontSize: 16),
-                                textAlign: TextAlign.center,
-                              ),
+                                SizedBox(width: 20.0),
+                                Container(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        'Boa tarde, Robson!',
+                                        style: TextStyle(
+                                            color: const Color(0xFFFFFFFF),
+                                            fontSize: 17),
+                                        textAlign: TextAlign.left,
+                                      ),
+                                      SizedBox(height: 10.0),
+                                      Text(
+                                        'C/C: 0987494826-0',
+                                        style: TextStyle(
+                                            color: const Color(0xFFFFFFFF),
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w200),
+                                        textAlign: TextAlign.left,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
@@ -105,7 +168,7 @@ class _DashboardPage extends State<DashboardPage> {
               ),
               Positioned(
                   left: 20,
-                  top: 260.0,
+                  top: 210.0,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -215,7 +278,7 @@ class _DashboardPage extends State<DashboardPage> {
                   )),
               Positioned(
                   left: 20,
-                  top: 450.0,
+                  top: 410.0,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -242,7 +305,8 @@ class _DashboardPage extends State<DashboardPage> {
                                         'Use seus trocados:',
                                         style: TextStyle(
                                             color: const Color(0xFF000000),
-                                            fontSize: 16, fontWeight: FontWeight.w500),
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500),
                                         textAlign: TextAlign.left,
                                       ),
                                     ),

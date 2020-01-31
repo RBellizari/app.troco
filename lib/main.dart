@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'screens/access.page.dart';
 import 'screens/name.page.dart';
@@ -22,8 +23,6 @@ import 'screens/img.company.page.dart';
 import 'screens/dashboard.page.dart';
 import 'screens/dashboard.company.page.dart';
 import 'screens/cam.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'screens/svg.dart';
 
 void main() => runApp(MyApp());
 
@@ -76,7 +75,7 @@ class SplashTroco extends StatefulWidget {
 
 class _SplashTrocoState extends State<SplashTroco> {
   startTime() async {
-    var _duration = new Duration(seconds: 3);
+    var _duration = new Duration(seconds: 4);
     return Timer(_duration, navigationPage);
   }
 
@@ -112,10 +111,9 @@ class _SplashTrocoState extends State<SplashTroco> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Container(
-            child: SvgPicture.asset(logoTroco),
-          ),
-          Container(
-            child: SvgPicture.asset(textTroco),
+            width: 160.0,
+            height: 185.0,
+            child: FlareActor("assets/splash-troco.flr", alignment:Alignment.center, fit:BoxFit.cover, animation:"Pig"),
           ),
         ],
       ),

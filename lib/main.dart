@@ -54,15 +54,13 @@ class MyApp extends StatelessWidget {
         '/EmailCompanyPage': (BuildContext context) => EmailCompanyPage(),
         '/PassCompanyPage': (BuildContext context) => PassCompanyPage(),
         '/ZipCodeCompanyPage': (BuildContext context) => ZipCodeCompanyPage(),
-        '/ZipCodeFullCompanyPage': (BuildContext context) => ZipCodeFullCompanyPage(),
+        '/ZipCodeFullCompanyPage': (BuildContext context) =>
+            ZipCodeFullCompanyPage(),
         '/FillCompanyPage': (BuildContext context) => FillCompanyPage(),
         '/ImgCompanyPage': (BuildContext context) => ImgCompanyPage(),
         '/DashboardPage': (BuildContext context) => DashboardPage(),
-        '/DashboardCompanyPage': (BuildContext context) => DashboardCompanyPage(),
-
-        
-
-       
+        '/DashboardCompanyPage': (BuildContext context) =>
+            DashboardCompanyPage(),
       },
     );
   }
@@ -113,7 +111,10 @@ class _SplashTrocoState extends State<SplashTroco> {
           Container(
             width: 160.0,
             height: 185.0,
-            child: FlareActor("assets/splash-troco.flr", alignment:Alignment.center, fit:BoxFit.cover, animation:"Pig"),
+            child: FlareActor("assets/splash-troco.flr",
+                alignment: Alignment.center,
+                fit: BoxFit.cover,
+                animation: "Pig"),
           ),
         ],
       ),

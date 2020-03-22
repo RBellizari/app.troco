@@ -110,7 +110,7 @@ class _SplashTrocoState extends State<SplashTroco> {
         children: <Widget>[
           Container(
             width: 160.0,
-            height: 185.0,
+            height: 210.0,
             child: FlareActor("assets/splash-troco.flr",
                 alignment: Alignment.center,
                 fit: BoxFit.cover,

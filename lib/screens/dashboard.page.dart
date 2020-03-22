@@ -74,16 +74,19 @@ class _DashboardPage extends State<DashboardPage> {
                           ),
                         ),
                         Column(
-                          //mainAxisAlignment: MainAxisAlignment.center,
+                          //mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
                             Align(
                               child: Container(
+                                height: 110,
                                   padding: EdgeInsets.only(
                                       top: 0.0,
                                       right: 0.0,
                                       bottom: 0.0,
                                       left: 0.0),
                                   child: AppBar(
+                                    
                                     title: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
@@ -91,7 +94,7 @@ class _DashboardPage extends State<DashboardPage> {
                                         SvgPicture.asset(
                                           textTroco,
                                           fit: BoxFit.cover,
-                                          height: 20.0,
+                                          
                                         ),
                                       ],
                                     ),
@@ -110,8 +113,10 @@ class _DashboardPage extends State<DashboardPage> {
                                     ),
                                   )),
                             ),
-                            SizedBox(height: 15.0),
+                          
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.max,
                               children: <Widget>[
                                 SizedBox(width: 20.0),
                                 Container(
